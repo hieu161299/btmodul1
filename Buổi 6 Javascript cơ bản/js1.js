@@ -1,3 +1,3 @@
 function showMess() {
-    document.write("Xin chào!");
+    console.log("Xin chào!");
 }
