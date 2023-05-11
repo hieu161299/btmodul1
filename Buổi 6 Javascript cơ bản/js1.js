@@ -1,3 +1,3 @@
-function showMess(){
-    alert('Xin chào!');
+function showMess() {
+    document.getElementById("showmess").innerHTML="Xin chào";
 }
