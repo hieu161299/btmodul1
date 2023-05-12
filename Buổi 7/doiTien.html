@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Đổi Tiền</title>
+</head>
+<body>
+  <table>
+    <tr>
+      <th>Amount</th>
+      <th>From Currency</th>
+      <th>To Currency</th>
+      <th></th>
+    </tr>
+    <tr>
+      <td>
+        <input type="text" id="dauVao">
+      </td>
+      <td>
+        <select id="fromCurrency">
+          <option value="USD">USD</option>
+          <option value="VNĐ">VNĐ</option>
+        </select>
+
+      </td>
+      <td >
+        <select id="toCurrency">
+          <option value="USD">USD</option>
+          <option value="VNĐ">VNĐ</option>
+        </select>
+      </td>
+      <td>
+        <button type="button" onclick="makeMoney()" >Convert</button>
+      </td>
+    </tr>
+
+  </table>
+  <p id="dauRa">Result</p>
+
+</body>
+</html>
+
+<script>
+  function makeMoney() {
+    let giaTriVao=document.getElementById("dauVao").value;
+    let select1=document.getElementById("fromCurrency").value;
+    let select2=document.getElementById("toCurrency").value;
+    if (select1 == select2){
+      document.getElementById("dauRa").innerHTML ="Result :"+giaTriVao;
+    }
+    if (select1== "VNĐ" && select2 == "USD") {
+      document.getElementById("dauRa").innerHTML ="Result :"+(giaTriVao / 23000);
+
+    }
+    if (select1== "USD" && select2 == "VNĐ") {
+      document.getElementById("dauRa").innerHTML ="Result :"+(giaTriVao * 23000);
+      
+    }
+    }
+
+</script>
