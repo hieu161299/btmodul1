@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Máy Tính</title>
+
+</head>
+<body>
+  <h2>Calculator</h2>
+  <input type="text" id="soThuNhat" placeholder="nhập số thứ nhất">
+  <input type="text" id="soThuHai" placeholder="nhập số thứ hai"><br>
+  <input type="button"value="Addition(+)" onclick="add1()">
+  <input type="button"value="Subtraction(-)" onclick="sub1()" >
+  <input type="button"value="Multiplication(X)" onclick="mul1()">
+  <input type="button"value="Divisiob(/)" onclick="di1()"><br>
+    <p id="ketQua">Result Division:</p>
+</body>
+</html>
+<script>
+
+    function add1() {
+        let value1=parseInt(document.getElementById("soThuNhat").value);
+        let value2=parseInt(document.getElementById("soThuHai").value);
+        document.getElementById("ketQua").innerHTML="Result Division:" +(value1+value2);
+    }
+    function sub1() {
+        let value1=parseInt(document.getElementById("soThuNhat").value);
+        let value2=parseInt(document.getElementById("soThuHai").value);
+        document.getElementById("ketQua").innerHTML="Result Division:" +(value1-value2);
+    }
+    function mul1() {
+        let value1=parseInt(document.getElementById("soThuNhat").value);
+        let value2=parseInt(document.getElementById("soThuHai").value);
+        document.getElementById("ketQua").innerHTML="Result Division:" +(value1*value2);
+    }
+    function di1() {
+        let value1=parseInt(document.getElementById("soThuNhat").value);
+        let value2=parseInt(document.getElementById("soThuHai").value);
+        document.getElementById("ketQua").innerHTML="Result Division:" +(value1/value2);
+    }
+</script>

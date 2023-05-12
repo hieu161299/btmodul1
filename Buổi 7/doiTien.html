@@ -18,15 +18,15 @@
       </td>
       <td>
         <select id="fromCurrency">
-          <option value="USD">USD</option>
-          <option value="VNĐ">VNĐ</option>
+          <option value="23000">USD</option>
+          <option value="1">VNĐ</option>
         </select>
 
       </td>
       <td >
         <select id="toCurrency">
-          <option value="USD">USD</option>
-          <option value="VNĐ">VNĐ</option>
+          <option value="23000">USD</option>
+          <option value="1">VNĐ</option>
         </select>
       </td>
       <td>
@@ -42,19 +42,19 @@
 
 <script>
   function makeMoney() {
-    let giaTriVao=document.getElementById("dauVao").value;
-    let select1=document.getElementById("fromCurrency").value;
-    let select2=document.getElementById("toCurrency").value;
+    let giaTriVao=parseInt(document.getElementById("dauVao").value);
+    let select1=parseInt(document.getElementById("fromCurrency").value);
+    let select2=parseInt(document.getElementById("toCurrency").value);
     if (select1 == select2){
       document.getElementById("dauRa").innerHTML ="Result :"+giaTriVao;
     }
-    if (select1== "VNĐ" && select2 == "USD") {
-      document.getElementById("dauRa").innerHTML ="Result :"+(giaTriVao / 23000);
+    if (select1== 1 && select2 == 23000) {
+      document.getElementById("dauRa").innerHTML ="Result :"+(giaTriVao / select2);
 
     }
-    if (select1== "USD" && select2 == "VNĐ") {
-      document.getElementById("dauRa").innerHTML ="Result :"+(giaTriVao * 23000);
-      
+    if (select1== 23000 && select2 == 1) {
+      document.getElementById("dauRa").innerHTML ="Result :"+(giaTriVao * select1);
+
     }
     }
 
