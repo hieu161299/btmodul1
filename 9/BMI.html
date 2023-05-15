@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BMI</title>
+</head>
+<body>
+  <h2>Tính chỉ số cân nặng</h2>
+  <form>
+    Nhập cân nặng: (kg)
+    <input id="inputWeight" type="text"><br><br>
+    Nhập chiều cao: (m)
+    <input id="inputHeight" type="text"><br><br>
+    <input  type="button" value="Kiểm tra" onclick="convert()">
+  </form>
+    <p id="out"></p>
+    <p id="note"></p>
+
+</body>
+</html>
+
+<script>
+  let weight = parseInt(document.getElementById("inputWeight").value);
+  let height = parseInt(document.getElementById("inputHeight").value);
+  let BMI = weight / (height^2);
+  function convert() {
+    let weight = parseInt(document.getElementById("inputWeight").value);
+    let height = parseInt(document.getElementById("inputHeight").value);
+    let BMI = weight / (height^2);
+    if (BMI < 18.5) {
+      document.getElementById("out").innerHTML = "chỉ số BMI là :" + BMI;
+      document.getElementById("note").innerHTML =" Underweight";
+
+    }else if (18.5 <= BMI && BMI < 25.0){
+      document.getElementById("out").innerHTML = "chỉ số BMI là :" + BMI;
+      document.getElementById("note").innerHTML =" Normal";
+    }else if (25.0 <= BMI && BMI < 30.0) {
+      document.getElementById("out").innerHTML = "chỉ số BMI là :" + BMI;
+      document.getElementById("note").innerHTML =" Overweight";
+    }else if (30 <= BMI) {
+      document.getElementById("out").innerHTML = "chỉ số BMI là :" + BMI;
+      document.getElementById("note").innerHTML =" Obese";
+    }
+
+  }
+
+
+
+</script>
