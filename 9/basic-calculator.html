@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculator</title>
+  <style>
+
+  </style>
+</head>
+<body>
+  <table >
+    <tr >
+      <td colspan="4" >
+        <input  id="inputValue" >
+      </td>
+    </tr>
+
+    <tr >
+      <td>
+        <button   onclick="input(1)">1</button>
+      </td>
+      <td>
+        <button   onclick="input(2)">2</button>
+      </td>
+      <td>
+        <button   onclick="input(3)">3</button>
+      </td>
+      <td>
+        <button   onclick="input('+')">+</button>
+      </td>
+    </tr>
+
+    <tr >
+      <td>
+        <button   onclick="input(4)">4</button>
+      </td>
+      <td>
+        <button   onclick="input(5)">5</button>
+      </td>
+      <td>
+        <button   onclick="input(6)">6</button>
+      </td>
+      <td>
+        <button onclick="input('-')">-</button>
+      </td>
+    </tr>
+
+    <tr >
+      <td>
+        <button   onclick="input(7)">7</button>
+      </td>
+      <td>
+        <button   onclick="input(8)">8</button>
+      </td>
+      <td>
+        <button   onclick="input(9)">9</button>
+      </td>
+      <td>
+        <button   onclick="input('*')">*</button>
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        <button type="reset">AC</button>
+      </td>
+      <td>
+        <button   onclick="input(0)">0</button>
+      </td>
+      <td>
+        <button   onclick="ketQua()">=</button>
+      </td>
+      <td>
+        <button   onclick="input('/')">/</button>
+      </td>
+    </tr>
+
+  </table>
+</body>
+</html>
+
+<script>
+  function input(number) {
+    let ip = document.getElementById("inputValue");
+    ip.value = ip.value + number;
+  }
+
+  function ketQua() {
+    let ip = document.getElementById("inputValue");
+    ip.value = eval(ip.value);
+  }
+</script>
