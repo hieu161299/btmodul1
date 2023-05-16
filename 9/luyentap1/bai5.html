@@ -1,10 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Title</title>
 </head>
 <body>
-$END$
+  <form>
+    điểm bài kiểm tra:
+    <input type="text" id="kiemTra"><br><br>
+    điểm thi giữa kỳ:
+    <input type="text" id="giuaKy"><br><br>
+    điểm thi cuối kỳ:
+    <input type="text" id="cuoiKy"><br><br>
+    <input type="button" value="Tính điểm" onclick="tinhDiem()">
+  </form>
+  <p id="ketQua"> </p>
+  <p id="xepHang"> </p>
 </body>
 </html>
+
+<script>
+
+  function tinhDiem() {
+    let diemKiemTra = parseInt(document.getElementById("kiemTra").value);
+    let diemGiuaKy = parseInt(document.getElementById("giuaKy").value);
+    let diemCuoiKy = parseInt(document.getElementById("cuoiKy").value);
+
+    let sum = diemKiemTra + diemGiuaKy + diemCuoiKy;
+    let diemXepHang = sum / 3;
+
+    if (8.5 <= diemXepHang) {
+      document.getElementById("ketQua").innerHTML = diemXepHang + " xếp loại giỏi";
+    }else if (6.5 < diemXepHang) {
+      document.getElementById("ketQua").innerHTML = diemXepHang + " xếp loại khá";
+    }else if ( 4 < diemXepHang) {
+      document.getElementById("ketQua").innerHTML = diemXepHang + " xếp loại tb";
+    }else if ( diemXepHang < 4) {
+      document.getElementById("ketQua").innerHTML = diemXepHang + " xếp loại yếu";
+    }
+
+  }
+</script>

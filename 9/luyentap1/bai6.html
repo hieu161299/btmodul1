@@ -1,10 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Hoa Hồng Bán Hàng</title>
 </head>
 <body>
-$END$
+  <form>
+    Doanh thu:
+    <input type="text" id="inValue" ><br><br>
+    <input type="button" onclick="tinhDoanhThu()" value="Tính hoa hồng">
+    <p id="ketQua"> Hiển thị kết quả</p>
+  </form>
 </body>
 </html>
+
+<script>
+  function tinhDoanhThu() {
+    let doanhThu = parseInt(document.getElementById("inValue").value);
+    if (doanhThu > 110) {
+      document.getElementById("ketQua").innerHTML = doanhThu * 0.1;
+    } else if (doanhThu == 110) {
+      document.getElementById("ketQua").innerHTML = doanhThu * 0.07;
+    } else if (doanhThu >= 100) {
+      document.getElementById("ketQua").innerHTML = doanhThu * 0.05;
+    }else {
+      document.getElementById("ketQua").innerHTML = "chưa đủ điều kiện nhận hoa hồng";
+    }
+  }
+</script>

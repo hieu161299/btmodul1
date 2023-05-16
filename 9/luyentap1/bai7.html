@@ -1,10 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Title</title>
 </head>
 <body>
-$END$
+    <form>
+        Số phút gọi trong tháng :
+        <input type="text" id="timeIn" >
+        <input type="button" onclick="tinhTien()" value="Tính phí">
+    </form>
+    <p id="ketQua"></p>
 </body>
 </html>
+
+<script>
+    function tinhTien() {
+        let phiCoDinh = 25000;
+        let timeUse = parseInt(document.getElementById("timeIn").value);
+
+        if (timeUse > 200) {
+            document.getElementById("ketQua").innerHTML ="Phí sử dụng là : " +(phiCoDinh + ( timeUse - 200 )*200);
+        }else if (timeUse > 150) {
+            document.getElementById("ketQua").innerHTML ="Phí sử dụng là : " +(phiCoDinh + ( timeUse - 150 )*400);
+        }else if (timeUse > 50) {
+            document.getElementById("ketQua").innerHTML ="Phí sử dụng là : " +(phiCoDinh + (timeUse - 50) * 600);
+        }else {
+            document.getElementById("ketQua").innerHTML ="Phí sử dụng là : " +(phiCoDinh + timeUse  * 600);
+        }
+    }
+</script>
