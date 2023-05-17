@@ -4,7 +4,15 @@
     <meta charset="UTF-8">
     <title>Calculator</title>
   <style>
-
+    button{
+      width: 100px;
+      height: 70px;
+    }
+    input{
+      width: 400px;
+      height: 70px;
+      font-size: 20px;
+    }
   </style>
 </head>
 <body>
@@ -84,9 +92,10 @@
     let ip = document.getElementById("inputValue");
     ip.value = ip.value + number;
   }
-
+  // (number) là tham số
   function ketQua() {
     let ip = document.getElementById("inputValue");
     ip.value = eval(ip.value);
+    //eval sẽ lấy các giá trị từ chuỗi rồi cộng lại với nhau bằng phép toán
   }
 </script>

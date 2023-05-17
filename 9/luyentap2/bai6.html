@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PT Bậc 1</title>
+</head>
+<body>
+  <form >
+    <div align="center">
+      <input type="text" placeholder="Input first number" id="first" ><br><br>
+      <input type="text" placeholder="Input second number" id="second" ><br><br>
+      <input type="button" value="Giải PT bậc 1" onclick="giaiPt()" >
+    </div>
+  </form>
+  <p id="ketQua" align="center"></p>
+</body>
+</html>
+
+<script>
+
+  function giaiPt() {
+    let a = parseInt(document.getElementById("first").value);
+    let b = parseInt(document.getElementById("second").value);
+
+    if (a==0 && b==0){
+      document.getElementById("ketQua").innerHTML= "phương trình có vô số nghiệm";
+    }else if (a != 0 && b == 0) {
+      document.getElementById("ketQua").innerHTML= "phương trình có 1 nghiệm là : " + 0;
+    }else {
+      document.getElementById("ketQua").innerHTML= "phương trình có 1 nghiệm là : " + (-b)/a;
+    }
+
+  }
+</script>

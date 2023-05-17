@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 1</title>
+</head>
+<body>
+  <form>
+    Nhập độ C:
+    <input type="text" id="input">
+    <input type="button" onclick="convert()" value="Convert"><br>
+  </form>
+  <p id="output"></p>
+</body>
+</html>
+
+<script>
+   function convert() {
+     let inputValue= parseInt(document.getElementById("input").value);
+     let outValue = (32 + (inputValue*9)/5);
+     document.getElementById("output").innerHTML = "Độ F = " + outValue;
+   }
+</script>
