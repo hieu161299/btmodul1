@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+
+</body>
+</html>
+
+<script>
+
+  let a = +prompt("input number:");
+  let check = true;
+  if ( a == 0 || a == 1) {
+      check = false;
+  }
+  for (let i = 2; i <= (a/2); i++) {
+    if (a%i == 0) {
+      check = false;
+    }else {
+      check = true;
+    }
+
+  }
+  if (check) {
+    document.write(a + ' là số nguyên tố');
+  }else {
+    document.write(a + ' không là số nguyên tố');
+  }
+</script>
