@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+
+<script>
+  document.write("Bảng cửu chương :");
+  document.write("<table border='1' width='300' >");
+  for (let i = 1; i <= 10; i++ ) {
+    document.write('<tr>');
+    for ( let j = 1; j <= 10; j++){
+      document.write(`<td> ${i*j}</td>`);
+    }
+    document.write('</tr>');
+  }
+  document.write("</table >");
+</script>
