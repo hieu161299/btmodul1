@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <input type="text" placeholder="Input Text:" id="inText">
+    <input type="button" value="Change" onclick="change()">
+    <p id="outText"></p>
+</body>
+</html>
+
+<script>
+  function change() {
+      let str = document.getElementById("inText").value;
+      const UPPER = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+      const LOWER = 'abcdefghijklmnopqrstuvwxyz';
+      const result = [];
+
+      for(let x=0; x<str.length; x++)
+      {
+          if(UPPER.includes(str[x]))
+          {
+              result[x] = str[x].toLowerCase();
+          }
+          else if(LOWER.includes(str[x]))
+          {
+              result[x] = str[x].toUpperCase();
+          }
+          else
+          {
+              result[x] = str[x];
+          }
+      }
+
+      console.log(result.join(''));
+
+     document.getElementById("outText").innerHTML = result.join('');
+  }
+
+</script>

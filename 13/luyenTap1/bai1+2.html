@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+
+<script>
+  const numbers = [2 , 15 ,1 ,5 ,36 ,3 ,10 ,17,26 ,8];
+  let result = [];
+  let count = 0;
+  let maxNumber = numbers[0];
+  document.write('Mảng đã tạo là :' + numbers+ '<br>');
+
+  for (let i =0, j =0; i < numbers.length ; i++) {
+    if ( numbers[i] >= 10) {
+      count++;
+      result[j] = numbers[i];
+      j++;
+    }
+  }
+  document.write(`Có ${count} phần tử lớn hớn hoặc bằng 10 là: ${result} <br>`);
+
+  let indexMax ;
+  for (let i =0; i < numbers.length ; i++) {
+      if (maxNumber <= numbers[i]) {
+          maxNumber = numbers[i];
+          indexMax = i;
+      }
+
+  }
+  console.log(indexMax );
+  console.log(maxNumber );
+  document.write(`Phần tử ${indexMax} có giá trị lớn nhất trong mảng = ${maxNumber} `)
+</script>

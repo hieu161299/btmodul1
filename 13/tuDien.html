@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p> Nhập từ :</p>
+  <input type="text" id="inputValue" >
+  <input type="button" value="Dịch" onclick="trans()" >
+  <p id="out"></p>
+</body>
+</html>
+
+<script>
+  function trans() {
+    let eng = [ 'banana' ,'apple' ,'orange' ,'pencil' ,'ruler' ];
+    let Viet = [ ' quả chuối' ,'quả táo' ,'quả cam' ,'bút chì' ,'thước kẻ' ];
+
+    let inText = document.getElementById("inputValue").value;
+    let result = [''];
+
+    let check = true;
+
+    for(let i = 0; i < eng.length; i++ ) {
+      if (eng[i] == inText) {
+        inText = [];
+        result = Viet[i];
+        check = true;
+        console.log(result);
+      }else {
+        check = false;
+      }
+
+    }
+    if (check) {
+      document.getElementById('out').innerHTML = result;
+    }else {
+      document.getElementById('out').innerHTML ='This text is not found! ';
+    }
+  }
+</script>
