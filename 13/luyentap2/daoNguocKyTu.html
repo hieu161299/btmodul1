@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+
+<script>
+  let myArr =  [ 'c', 's', 'c', '2', '6', '1' ];
+  document.write(myArr + '<br>');
+  let first = 0;
+  let last = myArr.length -1;
+  while (first < last) {
+    let a = myArr[first];
+    myArr[first] = myArr[last];
+    myArr[last] = a;
+    first++ ;
+    last-- ;
+  }
+  document.write(myArr.join(''));
+
+</script>
