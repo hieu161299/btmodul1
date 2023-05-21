@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+
+<script>
+    let x = [6 , 8 , 16 , 64, 57, 14, 23, 37 ];
+    let first = 0;
+    let last = x.length - 1;
+
+    document.write('Mảng đã nhập là :' +x + '<br>');
+
+    while (first < last) {
+        let b = x[first];
+        x[first] = x[last];
+        x[last] = b;
+        first++;
+        last--;
+    }
+
+    document.write('Mảng sau khi đảo ngược :' + x);
+</script>

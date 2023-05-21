@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+
+<script>
+  let arr = [];
+  for (let i = 0; i< 9 ; i++) {
+    arr[i] = +prompt("input number:");
+  }
+  document.write('Mảng đã nhập :' + arr + '<br>');
+
+  let x = +prompt("input number:");
+  for (let i = 0; i< 9 ; i++) {
+    if (x = arr[i] ) {
+      document.write(x + ' is in the array');
+      break;
+    }else {
+      document.write( x + ' is not in the array');
+      break;
+    }
+  }
+
+</script>

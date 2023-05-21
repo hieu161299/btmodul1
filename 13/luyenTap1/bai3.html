@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+
+<script>
+  let numbers = [2,10,15,36,24,3,5,7,8,14];
+  let  max = numbers[0];
+  let sum = 0;
+  for ( let i =0 ; i < numbers.length ; i++) {
+    sum = sum + numbers[i];
+    if (max <= numbers[i]) {
+      max = numbers[i];
+    }
+
+  }
+  document.write('Mảng đã nhập là :' + numbers + '<br>');
+  document.write("giá trị lớn nhất mảng là: " + max+ '<br>');
+  document.write("giá trị trung bình của các phần tử trong mảng =  " +sum/numbers.length);
+
+</script>
