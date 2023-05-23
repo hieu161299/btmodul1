@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+
+<script>
+  let star1 = ['Polaris', 'Aldebaran', 'Deneb', 'Vega',' Altair', 'Dubhe' , 'Regulus'];
+  let star2 = ['Ursa Minor', 'Tarurus',' Cygnus',' Lyra',' Aquila',' Ursa Major' ,' Leo'];
+
+  let starInput = prompt(" Input Star Name :");
+
+  function showStar(str) {
+
+        let check = true;
+
+        if (star1.includes(str) ) {
+            check = true;
+
+        }else {
+            check = false;
+        }
+        if (check) {
+            let index = star1.indexOf(str);
+
+            document.write(star2[index])
+        }else {
+            document.write('Không tìm thấy sao');
+        }
+
+  }
+
+  showStar(starInput);
+
+</script>

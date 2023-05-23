@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <p id="output1"></p>
+    <p id="output2"></p>
+</body>
+</html>
+
+<script>
+    let feetValue = +prompt('Input Feet value:');
+    let metersValue = +prompt('Input Feet value:');
+    function convertFeet(number) {
+        result = number * 0.305;
+
+        document.getElementById('output1').innerHTML = +number + ' feet' + ' = ' + result + ' meter';
+    }
+    function convertMeters(number) {
+        result = number * 3.279;
+        document.getElementById('output2').innerHTML = +number + ' meter' + ' = ' + result + ' feet' ;
+
+    }
+
+    convertFeet(metersValue);
+    convertMeters(feetValue);
+
+</script>

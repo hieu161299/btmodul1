@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Nếu V thuộc mảng đã cho xoá V khỏi mảng </title>
+</head>
+<body>
+
+</body>
+</html>
+
+<script>
+  let myNumbers = [ 10 , 11 ,12 ,13 ,14 ,15 ,16 ,17 ,18 ,19 ];
+
+  let result = [];
+
+  let v = 14;
+
+  for (let i =0 ; i < myNumbers.length; i++) {
+    if (myNumbers[i] == v ) {
+
+           continue;
+    }else {
+        result.push(myNumbers[i]);
+    }
+  }
+  result.push(0);
+  console.log(result);
+
+
+
+</script>
