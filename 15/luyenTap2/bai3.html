@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <p> Tính lũy thừa của: <input type="number" oninput="calculate()" id="input"></p>
+    <p>Kết quả:<span id="output"></span></p>
+</body>
+</html>
+<script>
+
+  function calculate(inValue) {
+    inValue = parseInt(document.getElementById('input').value);
+
+    let result = 1;
+    for (let i = 1 ; i <= inValue ; i++) {
+      result = result * i;
+    }
+    // console.log(result);
+    document.getElementById('output').innerHTML = result;
+
+    return result;
+  }
+</script>

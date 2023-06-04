@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+  <input type="text" id="input" oninput="checkNum(this.value)" onchange="checkNum(this.value)" >
+</body>
+</html>
+
+<script>
+ /* let number = document.getElementById('input').value;*/
+  function checkNum(inNum) {
+     inNum = parseFloat(inNum);
+    let check = true;
+    if (inNum > 0) {
+      check = true;
+    }else {
+      check = false;
+    }
+    return check;
+
+  }
+
+</script>

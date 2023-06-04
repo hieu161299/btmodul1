@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+
+<script>
+    let firstNumber = +prompt('Enter number:');
+    let secondNumber = +prompt('Enter number:');
+    let thirdNumber = +prompt('Enter number:');
+
+
+    function findMin(first,second,third) {
+        let min = first;
+        let arr = [first,second,third];
+        for (let i = 0 ; i < arr.length ; i++) {
+            if ( arr[i] <= min  ) {
+                min = arr[i];
+            }
+        }
+        return min;
+    }
+
+    let a=findMin(firstNumber,secondNumber,thirdNumber);
+    console.log(a);
+</script>
