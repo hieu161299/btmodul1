@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+
+<script>
+  let numbers = [1,6,8,7,3,4,9,2];
+
+  function reverseArr(arr) {
+    let first = 0 ;
+    let last  = arr.length - 1;
+    let num = 0;
+    for (let i = 0 ; i< arr.length/2 ; i++) {
+      num = arr[first];
+      arr[first] = arr[last];
+      arr[last] = num ;
+      first ++;
+      last --;
+    }
+    return arr;
+  }
+
+  console.log( reverseArr(numbers));
+
+</script>

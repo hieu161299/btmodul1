@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+
+<script>
+  let myArr = ['a','h','e','b','f','e','t','v','b','a','o','p','u','t','v','b'];
+  let keyValue = prompt('enter something');
+  function checkKeyArray(arr,key) {
+    let count = 0;
+    for (let i = 0 ; i < arr.length ; i++) {
+      if (arr[i] === key ) {
+        count++;
+      }
+    }
+    return count;
+  }
+  let result = checkKeyArray(myArr,keyValue);
+  console.log(result);
+
+</script>
